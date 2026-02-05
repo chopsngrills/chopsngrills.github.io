@@ -99,12 +99,43 @@ background:#111;
 padding:20px;
 text-align:center;
 border-top:1px solid #ff7a00;
+
+    
 }
 
+        /* FLOATING SIDEBAR */
+.sidebar{
+position:fixed;
+right:0;
+top:40%;
+display:flex;
+flex-direction:column;
+z-index:999;
+}
+
+.sidebar a{
+text-decoration:none;
+color:white;
+padding:12px;
+margin:5px 0;
+background:#ff7a00;
+border-radius:8px 0 0 8px;
+font-size:14px;
+transition:0.3s;
+}
+
+.sidebar a:hover{
+background:#ffb347;
+}
     </style>
+
+
 
 </head>
 
+
+
+    
 <body>
 
 <!-- NAVBAR -->
@@ -139,8 +170,27 @@ We bring unforgettable flavors and luxury service to weddings, parties and corpo
 
 <!-- FOOTER -->
 <footer>
+    
 <p>© 2026 Chopsngrills. All Rights Reserved.</p>
+
+    <!-- FLOATING SIDEBAR -->
+<div class="sidebar">
+
+<a href="#">📋 Menu</a>
+
+<a href="#">🎉 Events</a>
+
+<a href="https://instagram.com/chopngrill_" target="_blank">📸 Instagram</a>
+
+<a href="https://facebook.com/chopngrill_" target="_blank">👍 Facebook</a>
+
+<a href="https://wa.me/2348174709084" target="_blank">💬 WhatsApp</a>
+
+</div>
 </footer>
+    
+    
+    
 
 </body> 
 
