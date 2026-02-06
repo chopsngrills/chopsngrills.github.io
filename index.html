@@ -127,6 +127,10 @@ transition:0.3s;
 .sidebar a:hover{
 background:#ffb347;
 }
+        html {
+scroll-behavior: smooth;
+        }
+        
     </style>
 
 
@@ -144,10 +148,10 @@ background:#ffb347;
 
 <div class="nav-links">
 <a href="#">Home</a>
-<a href="#">Menu</a>
-<a href="#">Gallery</a>
-<a href="#">Events</a>
-<a href="#">Contact</a>
+<a href="#menu">Menu</a>
+<a href="#gallery">Gallery</a>
+<a href="#events">Events</a>
+<a href="#contact">Contact</a>
 </div>
 </div>
 
@@ -160,7 +164,34 @@ background:#ffb347;
 </div>
 
 <!-- ABOUT -->
-<div class="section">
+<div class="section" id="events">
+    <div class="section" id="menu">
+
+<h2>Our Menu Highlights</h2>
+
+<p>
+From premium barbecue to delicious small chops and signature shawarma,
+we deliver unforgettable flavors for every celebration.
+</p>
+
+<button class="btn">View Full Menu</button>
+
+    </div>
+ <div class="section" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 7 Temidire Close, Ishawo Road, Owutu Ikorodu, Lagos</p>
+
+<p>📞 +2348174709084</p>
+
+<p>📧 chopsngrill@gmail.com</p>
+
+ </div>
+
+    
+
+    
 <h2>Why Choose Us</h2>
 <p>
 Chopsngrills combines premium grill mastery with professional event catering services.
@@ -176,9 +207,9 @@ We bring unforgettable flavors and luxury service to weddings, parties and corpo
     <!-- FLOATING SIDEBAR -->
 <div class="sidebar">
 
-<a href="#">📋 Menu</a>
+<a href="#menu">📋 Menu</a>
 
-<a href="#">🎉 Events</a>
+<a href="#events">🎉 Events</a>
 
 <a href="https://instagram.com/chopngrill_" target="_blank">📸 Instagram</a>
 
