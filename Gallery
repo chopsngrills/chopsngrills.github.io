@@ -1,1 +1,28 @@
+<div class="section">
 
+<h2>Food & Event Gallery</h2>
+
+<p>
+Explore moments captured from our kitchen creations,
+grill sessions and event catering highlights.
+</p>
+
+<br>
+
+<div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+
+<div style="background:#1a1a1a; padding:40px; border-radius:10px;">
+🍖 Food Photography Coming Soon
+</div>
+
+<div style="background:#1a1a1a; padding:40px; border-radius:10px;">
+🎉 Event Moments Coming Soon
+</div>
+
+<div style="background:#1a1a1a; padding:40px; border-radius:10px;">
+🔥 Grill Action Coming Soon
+</div>
+
+</div>
+
+</div>
