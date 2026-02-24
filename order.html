@@ -193,5 +193,35 @@ color:#777;
 ⚠ Orders are strictly pre-order. Minimum notice required. Delivery fees apply.
 </div>
 
+
+  <script>
+
+function toggleCustom(){
+var box = document.getElementById("customBox");
+if(box.style.display === "none"){
+box.style.display = "block";
+}else{
+box.style.display = "none";
+}
+}
+
+function sendOrder(){
+
+var checkboxes = document.querySelectorAll('#customBox input[type="checkbox"]:checked');
+var selected = [];
+
+checkboxes.forEach((item)=>{
+selected.push(item.value);
+});
+
+var message = "Hello, I want to order:\nCatfish Barbecue\nSides: " + selected.join(", ");
+
+var url = "https://wa.me/2348174709084?text=" + encodeURIComponent(message);
+
+window.open(url, '_blank');
+
+}
+
+</script>
 </body>
 </html>
