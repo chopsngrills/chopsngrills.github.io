@@ -221,8 +221,12 @@ checkboxes.forEach((item)=>{
 selected.push(item.value);
 });
 
-var message = "Hello, I want to order:\nCatfish Barbecue\nSides: " + selected.join(", ");
+var quantity = document.getElementById("qty").value;
 
+var message = "Hello, I want to order:\n"
++ "Catfish Barbecue\n"
++ "Quantity: " + quantity + "\n"
++ "Sides: " + selected.join(", ");
 var url = "https://wa.me/2348174709084?text=" + encodeURIComponent(message);
 
 window.open(url, '_blank');
