@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart - Chops'n'Grills</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Your Cart</h1>
+
+<div id="cartItems"></div>
+
+<h2 id="total"></h2>
+
+<button onclick="checkout()">Proceed to Checkout</button>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function displayCart() {
+    let container = document.getElementById("cartItems");
+    let total = 0;
+    container.innerHTML = "";
+
+    cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+
+        container.innerHTML += `
+            <div>
+                <h3>${item.name}</h3>
+                <p>₦${item.price} x ${item.quantity}</p>
+                <button onclick="removeItem(${index})">Remove</button>
+                <hr>
+            </div>
+        `;
+    });
+
+    document.getElementById("total").innerText = "Total: ₦" + total;
+}
+
+function removeItem(index){
+    cart.splice(index,1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+}
+
+function checkout(){
+    window.location.href = "checkout.html";
+}
+
+displayCart();
+</script>
+
+</body>
+</html>
