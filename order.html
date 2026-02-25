@@ -58,6 +58,7 @@ border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 overflow:hidden;
 transition:0.3s;
+cursor:pointer; /* entire card clickable */
 }
 
 .card:hover{
@@ -85,24 +86,16 @@ color:#555;
 margin:5px 0;
 }
 
-.price{
-font-weight:bold;
-margin:10px 0;
-}
-
-.order-btn{
-display:inline-block;
-padding:10px 15px;
-background:#ff7a00;
-color:white;
+/* Make sub-items clickable */
+.sub-item a{
+color:#333;
 text-decoration:none;
-border-radius:25px;
-font-size:14px;
-margin-top:5px;
+display:block;
+padding:5px 0;
 }
 
-.order-btn:hover{
-background:#e96a00;
+.sub-item a:hover{
+color:#ff7a00;
 }
 
 /* NOTICE */
@@ -138,12 +131,11 @@ color:#777;
 <img src="https://images.unsplash.com/photo-1553621042-f6e147245754" alt="Barbeque">
 <div class="card-content">
 <h3>Barbeque</h3>
-<div class="sub-item">Catfish Barbeque</div>
-<div class="sub-item">Crocker Fish Barbeque</div>
-<div class="sub-item">Grill Chicken & Chips</div>
-<div class="sub-item">Beef Suya</div>
-<div class="sub-item">Chicken Suya</div>
-<a class="order-btn" href="https://wa.me/2348174709084?text=Hello%20I%20want%20to%20order%20Barbeque" target="_blank">Order on WhatsApp</a>
+<div class="sub-item"><a href="catfish-barbeque.html">Catfish Barbeque</a></div>
+<div class="sub-item"><a href="crocker-fish-barbeque.html">Crocker Fish Barbeque</a></div>
+<div class="sub-item"><a href="grill-chicken-chips.html">Grill Chicken & Chips</a></div>
+<div class="sub-item"><a href="beef-suya.html">Beef Suya</a></div>
+<div class="sub-item"><a href="chicken-suya.html">Chicken Suya</a></div>
 </div>
 </div>
 
@@ -152,10 +144,9 @@ color:#777;
 <img src="https://images.unsplash.com/photo-1604908176997-431f74f4f7f4" alt="Party Delight">
 <div class="card-content">
 <h3>Party Delight</h3>
-<div class="sub-item">Asun Gizzard</div>
-<div class="sub-item">Peppered Gizzard</div>
-<div class="sub-item">Peppered Fried Beef</div>
-<a class="order-btn" href="https://wa.me/2348174709084?text=Hello%20I%20want%20to%20order%20Party%20Delight" target="_blank">Order on WhatsApp</a>
+<div class="sub-item"><a href="asun-gizzard.html">Asun Gizzard</a></div>
+<div class="sub-item"><a href="peppered-gizzard.html">Peppered Gizzard</a></div>
+<div class="sub-item"><a href="peppered-fried-beef.html">Peppered Fried Beef</a></div>
 </div>
 </div>
 
@@ -164,9 +155,8 @@ color:#777;
 <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Shawarma">
 <div class="card-content">
 <h3>Shawarma</h3>
-<div class="sub-item">Beef</div>
-<div class="sub-item">Chicken</div>
-<a class="order-btn" href="https://wa.me/2348174709084?text=Hello%20I%20want%20to%20order%20Shawarma" target="_blank">Order on WhatsApp</a>
+<div class="sub-item"><a href="beef-shawarma.html">Beef</a></div>
+<div class="sub-item"><a href="chicken-shawarma.html">Chicken</a></div>
 </div>
 </div>
 
