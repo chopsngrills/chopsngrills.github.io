@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,46 +11,37 @@
 body{
 margin:0;
 font-family: Arial, sans-serif;
-background:#0f0f0f;
-color:white;
+background:#f9f9f9;
+color:#333;
 }
 
 /* NAVBAR */
 .navbar{
-background:#111;
+background:white;
 padding:15px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-border-bottom:2px solid #ff7a00;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar a{
 text-decoration:none;
-color:white;
+color:#ff7a00;
 font-weight:bold;
 margin-left:20px;
-}
-
-.navbar a:hover{
-color:gold;
 }
 
 /* HEADER */
 .header{
 text-align:center;
-padding:50px 20px;
-background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+padding:40px 20px;
+background:linear-gradient(45deg,#ff7a00,#ffb347);
+color:white;
 }
 
 .header h1{
-color:#ff7a00;
 margin:0;
-}
-
-.header p{
-color:gold;
-margin-top:10px;
 }
 
 /* FOOD GRID */
@@ -62,17 +54,16 @@ justify-content:center;
 }
 
 .card{
-background:#1a1a1a;
+background:white;
 width:300px;
 border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 overflow:hidden;
-border:1px solid #ff7a00;
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-5px);
-box-shadow:0 0 15px rgba(255,122,0,0.5);
 }
 
 .card img{
@@ -93,7 +84,6 @@ color:#ff7a00;
 .price{
 font-weight:bold;
 margin:10px 0;
-color:gold;
 }
 
 .order-btn{
@@ -107,8 +97,7 @@ font-size:14px;
 }
 
 .order-btn:hover{
-background:gold;
-color:black;
+background:#e96a00;
 }
 
 /* NOTICE */
@@ -116,7 +105,7 @@ color:black;
 text-align:center;
 padding:20px;
 font-size:14px;
-color:gold;
+color:#777;
 }
 
 </style>
@@ -135,14 +124,15 @@ color:gold;
 </div>
 
 <div class="header">
-<h1>Quick Order</h1>
-<p>Pre-Order • Pickup & Delivery</p>
+<h1>Quick Order (Pre-Order Only)</h1>
+<p>Pickup & Delivery Available</p>
 </div>
 
 <div class="container">
 
+<!-- ITEM 1 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Chicken and Chips">
 <div class="card-content">
 <h3>Chicken & Chips</h3>
 <p>Grilled chicken served with crispy fries.</p>
@@ -151,8 +141,9 @@ color:gold;
 </div>
 </div>
 
+<!-- ITEM 2 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Beef Shawarma">
 <div class="card-content">
 <h3>Beef Shawarma</h3>
 <p>Loaded beef shawarma with creamy signature sauce.</p>
@@ -161,14 +152,67 @@ color:gold;
 </div>
 </div>
 
+  <div class="card">
+<img src="https://images.unsplash.com/photo-1604908176997-431f74f4f7f4">
+<div class="card-content">
+<h3>Chicken & Chips</h3>
+<p>Grilled chicken served with crispy fries.</p>
+<div class="price">₦5,500</div>
+<button class="order-btn">Customize & Order</button>
+</div>
+</div>
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1553621042-f6e147245754">
+<img src="https://images.unsplash.com/photo-1600891964092-4316c288032e">
+<div class="card-content">
+<h3>Small Chops Platter</h3>
+<p>Mixed small chops platter for events and pre-orders.</p>
+<div class="price">₦10,000</div>
+<button class="order-btn">Customize & Order</button>
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1553621042-f6e147245754" alt="Fish Barbecue Platter">
 <div class="card-content">
 <h3>Fish Barbecue Platter</h3>
 <p>Whole grilled fish served with spicy pepper sauce.</p>
 <div class="price">₦8,000</div>
 <a class="order-btn" href="https://wa.me/2348174709084?text=Hello%20I%20want%20to%20order%20Fish%20Barbecue%20Platter" target="_blank">Order on WhatsApp</a>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1553621042-f6e147245754">
+<div class="card-content">
+<h3>Catfish Barbecue</h3>
+<p>Grilled whole catfish served with spicy pepper mix.</p>
+<div class="price">₦7,000</div>
+
+<button class="order-btn" onclick="toggleCustom()">Customize & Order</button>
+
+<div id="customBox" style="display:none; margin-top:15px;">
+
+<p><strong>Select Sides:</strong></p>
+
+<label><input type="checkbox" value="Yam Fries"> Yam Fries</label><br>
+<label><input type="checkbox" value="Plantain"> Plantain</label><br>
+<label><input type="checkbox" value="Coleslaw"> Coleslaw</label><br>
+<label><input type="checkbox" value="Pepper Sauce"> Pepper Sauce</label><br><br>
+
+  <label><input type="checkbox" value="Pepper Sauce"> Pepper Sauce</label><br><br>
+
+<p><strong>Quantity:</strong></p>
+<input type="number" id="qty" value="1" min="1" style="width:60px; padding:5px;">
+<br><br>
+
+<button class="order-btn" onclick="sendOrder()">Confirm Order</button>
+<button class="order-btn" onclick="sendOrder()">Confirm Order</button>
+
 </div>
+
+</div>
+</div></div>
+
 </div>
 
 </div>
@@ -177,5 +221,39 @@ color:gold;
 ⚠ Orders are strictly pre-order. Minimum notice required. Delivery fees apply.
 </div>
 
+
+  <script>
+
+function toggleCustom(){
+var box = document.getElementById("customBox");
+if(box.style.display === "none"){
+box.style.display = "block";
+}else{
+box.style.display = "none";
+}
+}
+
+function sendOrder(){
+
+var checkboxes = document.querySelectorAll('#customBox input[type="checkbox"]:checked');
+var selected = [];
+
+checkboxes.forEach((item)=>{
+selected.push(item.value);
+});
+
+var quantity = document.getElementById("qty").value;
+
+var message = "Hello, I want to order:\n"
++ "Catfish Barbecue\n"
++ "Quantity: " + quantity + "\n"
++ "Sides: " + selected.join(", ");
+var url = "https://wa.me/2348174709084?text=" + encodeURIComponent(message);
+
+window.open(url, '_blank');
+
+}
+
+</script>
 </body>
 </html>
