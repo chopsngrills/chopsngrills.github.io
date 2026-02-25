@@ -1,118 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff; /* keep your original page color */
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    .menu-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-    .card {
-      background: #fff; /* same as original */
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 280px;
-      text-align: center;
-      padding: 15px;
-      transition: transform 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .card h2 {
-      margin: 10px 0;
-      font-size: 22px;
-    }
-    .card p {
-      margin-bottom: 15px;
-      color: #555;
-      flex-grow: 1;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #000000; /* keep original button color if black */
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #333333;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Order | Chops n Grills</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Arial, sans-serif;
+background:#0f0f0f;
+color:white;
+}
+
+/* NAVBAR */
+.navbar{
+background:#111;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid #ff7a00;
+}
+
+.navbar a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+margin-left:20px;
+}
+
+.navbar a:hover{
+color:gold;
+}
+
+/* HEADER */
+.header{
+text-align:center;
+padding:50px 20px;
+background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+}
+
+.header h1{
+color:#ff7a00;
+margin:0;
+}
+
+.header p{
+color:gold;
+margin-top:10px;
+}
+
+/* FOOD GRID */
+.container{
+padding:40px 20px;
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.card{
+background:#1a1a1a;
+width:300px;
+border-radius:12px;
+overflow:hidden;
+border:1px solid #ff7a00;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 15px rgba(255,122,0,0.5);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin:0;
+color:#ff7a00;
+}
+
+.price{
+font-weight:bold;
+margin:10px 0;
+color:gold;
+}
+
+.order-btn{
+display:inline-block;
+padding:10px 15px;
+background:#ff7a00;
+color:white;
+text-decoration:none;
+border-radius:25px;
+font-size:14px;
+}
+
+.order-btn:hover{
+background:gold;
+color:black;
+}
+
+/* NOTICE */
+.notice{
+text-align:center;
+padding:20px;
+font-size:14px;
+color:gold;
+}
+
+</style>
 </head>
+
 <body>
 
-<header>Order Menu</header>
+<div class="navbar">
+<h2 style="color:#ff7a00;">Chops n Grills</h2>
 
-<section class="menu-section">
-  <!-- Barbeque Card -->
-  <div class="card">
-    <img src="images/placeholder.jpg" alt="Barbeque">
-    <h2>Barbeque</h2>
-    <p>Catfish, Croaker Fish, Chicken, Full Goat</p>
-    <a href="barbeque.html" class="btn">View Items</a>
-  </div>
+<div>
+<a href="index.html">Home</a>
+<a href="events.html">Events</a>
+<a href="menu.html">Catering Menu</a>
+</div>
+</div>
 
-  <!-- Shawarma Card -->
-  <div class="card">
-    <img src="images/placeholder.jpg" alt="Shawarma">
-    <h2>Shawarma</h2>
-    <p>Chicken, Beef, Special Sauce</p>
-    <a href="shawarma.html" class="btn">View Items</a>
-  </div>
+<div class="header">
+<h1>Quick Order</h1>
+<p>Pre-Order • Pickup & Delivery</p>
+</div>
 
-  <!-- Drinks Card -->
-  <div class="card">
-    <img src="images/placeholder.jpg" alt="Drinks">
-    <h2>Drinks</h2>
-    <p>Chapman, Yogurt, Orange Juice, Exotic Blends</p>
-    <a href="drinks.html" class="btn">View Items</a>
-  </div>
+<div class="container">
 
-  <!-- Snacks Card -->
-  <div class="card">
-    <img src="images/placeholder.jpg" alt="Snacks">
-    <h2>Snacks</h2>
-    <p>Spring Rolls, Puff Puff, Meat Pie</p>
-    <a href="snacks.html" class="btn">View Items</a>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+<div class="card-content">
+<h3>Chicken & Chips</h3>
+<p>Grilled chicken served with crispy fries.</p>
+<div class="price">₦5,500</div>
+<a class="order-btn" href="https://wa.me/2348174709084?text=Hello%20I%20want%20to%20order%20Chicken%20and%20Chips" target="_blank">Order on WhatsApp</a>
+</div>
+</div>
 
-  <!-- Desserts Card -->
-  <div class="card">
-    <img src="images/placeholder.jpg" alt="Desserts">
-    <h2>Desserts</h2>
-    <p>Cakes, Ice Cream, Pudding</p>
-    <a href="desserts.html" class="btn">View Items</a>
-  </div>
-</section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+<div class="card-content">
+<h3>Beef Shawarma</h3>
+<p>Loaded beef shawarma with creamy signature sauce.</p>
+<div class="price">₦3,500</div>
+<a class="order-btn" href="https://wa.me/2348174709084?text=Hello%20I%20want%20to%20order%20Beef%20Shawarma" target="_blank">Order on WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1553621042-f6e147245754">
+<div class="card-content">
+<h3>Fish Barbecue Platter</h3>
+<p>Whole grilled fish served with spicy pepper sauce.</p>
+<div class="price">₦8,000</div>
+<a class="order-btn" href="https://wa.me/2348174709084?text=Hello%20I%20want%20to%20order%20Fish%20Barbecue%20Platter" target="_blank">Order on WhatsApp</a>
+</div>
+</div>
+
+</div>
+
+<div class="notice">
+⚠ Orders are strictly pre-order. Minimum notice required. Delivery fees apply.
+</div>
 
 </body>
 </html>
