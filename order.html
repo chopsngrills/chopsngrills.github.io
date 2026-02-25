@@ -55,15 +55,16 @@ body{
   background:white;
   width:300px;
   border-radius:12px;
-  box-shadow: 0 0 10px rgba(255, 122, 0, 0.3); /* soft orange glow */
+  border: 2px solid #ff7a00; /* orange border */
+  box-shadow: 0 0 10px rgba(255, 122, 0, 0.3); /* soft glow */
   overflow:hidden;
-  transition: 0.3s, box-shadow 0.3s;
-  cursor:pointer; /* entire card clickable */
+  transition: 0.3s, box-shadow 0.3s, transform 0.3s;
+  cursor:pointer;
 }
 
 .card:hover{
   transform:translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 122, 0, 0.7), 0 5px 20px rgba(0,0,0,0.2); /* stronger glow + shadow */
+  box-shadow: 0 0 25px rgba(255, 122, 0, 0.7), 0 5px 20px rgba(0,0,0,0.2); /* stronger glow */
 }
 
 .card img{
@@ -77,14 +78,18 @@ body{
 }
 
 .card-content h3{
-  margin:0;
+  margin:0 0 10px 0;
   color:#ff7a00;
 }
 
+/* Sub-item styling */
 .sub-item{
   font-size:14px;
   color:#555;
   margin:5px 0;
+  padding:5px;
+  border-radius:6px;
+  transition:0.2s;
 }
 
 /* Make sub-items clickable */
@@ -92,11 +97,13 @@ body{
   color:#333;
   text-decoration:none;
   display:block;
-  padding:5px 0;
+  width:100%;
 }
 
 .sub-item a:hover{
+  background: #ffefdb;
   color:#ff7a00;
+  padding-left:10px;
 }
 
 /* NOTICE */
@@ -132,11 +139,11 @@ body{
   <img src="https://via.placeholder.com/300x200.png?text=Barbeque" alt="Barbeque">
   <div class="card-content">
     <h3>Barbeque</h3>
-    <div class="sub-item"><a href="catfish-barbeque.html">Catfish Barbeque</a></div>
-    <div class="sub-item"><a href="crocker-fish-barbeque.html">Crocker Fish Barbeque</a></div>
-    <div class="sub-item"><a href="grill-chicken-chips.html">Grill Chicken & Chips</a></div>
-    <div class="sub-item"><a href="beef-suya.html">Beef Suya</a></div>
-    <div class="sub-item"><a href="chicken-suya.html">Chicken Suya</a></div>
+    <div class="sub-item"><a href="#">Catfish Barbeque</a></div>
+    <div class="sub-item"><a href="#">Crocker Fish Barbeque</a></div>
+    <div class="sub-item"><a href="#">Grill Chicken & Chips</a></div>
+    <div class="sub-item"><a href="#">Beef Suya</a></div>
+    <div class="sub-item"><a href="#">Chicken Suya</a></div>
   </div>
 </div>
 
@@ -145,9 +152,9 @@ body{
   <img src="https://via.placeholder.com/300x200.png?text=Party+Delight" alt="Party Delight">
   <div class="card-content">
     <h3>Party Delight</h3>
-    <div class="sub-item"><a href="asun-gizzard.html">Asun Gizzard</a></div>
-    <div class="sub-item"><a href="peppered-gizzard.html">Peppered Gizzard</a></div>
-    <div class="sub-item"><a href="peppered-fried-beef.html">Peppered Fried Beef</a></div>
+    <div class="sub-item"><a href="#">Asun Gizzard</a></div>
+    <div class="sub-item"><a href="#">Peppered Gizzard</a></div>
+    <div class="sub-item"><a href="#">Peppered Fried Beef</a></div>
   </div>
 </div>
 
@@ -156,8 +163,8 @@ body{
   <img src="https://via.placeholder.com/300x200.png?text=Shawarma" alt="Shawarma">
   <div class="card-content">
     <h3>Shawarma</h3>
-    <div class="sub-item"><a href="beef-shawarma.html">Beef</a></div>
-    <div class="sub-item"><a href="chicken-shawarma.html">Chicken</a></div>
+    <div class="sub-item"><a href="#">Beef</a></div>
+    <div class="sub-item"><a href="#">Chicken</a></div>
   </div>
 </div>
 
