@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quick Meals - Chops'n'Grills</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<h1>Quick Meals</h1>
+
+<div class="card">
+<h3>Chicken & Chips</h3>
+<p>₦5,500</p>
+<input type="number" id="qty1" value="1" min="1">
+<button onclick="addToCart('Chicken & Chips',5500,'qty1')">
+Add to Cart
+</button>
+</div>
+
+<div class="card">
+<h3>Beef Suya</h3>
+<p>₦3,000</p>
+<input type="number" id="qty2" value="1" min="1">
+<button onclick="addToCart('Beef Suya',3000,'qty2')">
+Add to Cart
+</button>
+</div>
+
+<div class="card">
+<h3>Chicken Suya</h3>
+<p>₦3,500</p>
+<input type="number" id="qty3" value="1" min="1">
+<button onclick="addToCart('Chicken Suya',3500,'qty3')">
+Add to Cart
+</button>
+</div>
+
+<script>
+function addToCart(name, price, qtyId){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let quantity = document.getElementById(qtyId).value;
+
+    let item = {
+        name: name,
+        price: price,
+        quantity: parseInt(quantity)
+    };
+
+    cart.push(item);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart!");
+}
+</script>
+
+</body>
+</html>
