@@ -1,160 +1,196 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quick Order</title>
+<title>Quick Order | Chops n Grills</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f9f9f9;
+  color:#333;
 }
 
-header {
-    background: linear-gradient(to right, #ff8c00, #ff6600);
-    padding: 40px 20px;
-    text-align: center;
-    color: white;
+/* NAVBAR */
+.navbar{
+  background:white;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
+.navbar a{
+  text-decoration:none;
+  color:#ff7a00;
+  font-weight:bold;
+  margin-left:20px;
 }
 
-header p {
-    margin-top: 10px;
+/* HEADER */
+.header{
+  text-align:center;
+  padding:40px 20px;
+  background:linear-gradient(45deg,#ff7a00,#ffb347);
+  color:white;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 50px;
+.header h1{
+  margin:0;
 }
 
-.card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    text-decoration: none;
-    color: black;
-    border: 2px solid #ff6600;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
-    transition: 0.4s ease;
-    position: relative;
+/* FOOD GRID */
+.container{
+  padding:40px 20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:center;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(255, 102, 0, 0.8);
+.card{
+  background:white;
+  width:300px;
+  border-radius:12px;
+  border: 2px solid #ff7a00; /* orange border */
+  box-shadow: 0 0 10px rgba(255, 122, 0, 0.3); /* soft glow */
+  overflow:hidden;
+  transition: 0.3s, box-shadow 0.3s, transform 0.3s;
+  cursor:pointer;
 }
 
-.image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 122, 0, 0.7), 0 5px 20px rgba(0,0,0,0.2); /* stronger glow */
 }
 
-.image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.6s ease;
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
 }
 
-.image-wrapper img.hover-img {
-    opacity: 0;
+.card-content{
+  padding:20px;
 }
 
-.card:hover .image-wrapper img.hover-img {
-    opacity: 1;
+.card-content h3{
+  margin:0 0 10px 0;
+  color:#ff7a00;
 }
 
-.card:hover .image-wrapper img.main-img {
-    opacity: 0;
+/* Sub-item styling */
+.sub-item{
+  font-size:14px;
+  color:#555;
+  margin:5px 0;
+  padding:5px;
+  border-radius:6px;
+  transition:0.2s;
 }
 
-.card-content {
-    padding: 20px;
+/* Make sub-items clickable */
+.sub-item a{
+  color:#333;
+  text-decoration:none;
+  display:block;
+  width:100%;
 }
 
-.card-content h3 {
-    color: #ff6600;
-    margin: 0 0 10px 0;
+.sub-item a:hover{
+  background: #ffefdb;
+  color:#ff7a00;
+  padding-left:10px;
 }
 
-.card-content p {
-    font-size: 14px;
-    color: #555;
+/* NOTICE */
+.notice{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#777;
 }
-
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Quick Order (Pre-Order Only)</h1>
-    <p>Pickup & Delivery Available</p>
-</header>
+<div class="navbar">
+  <h2 style="color:#ff7a00;">Chops n Grills</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="menu.html">Catering Menu</a>
+  </div>
+</div>
+
+<div class="header">
+  <h1>Quick Order (Pre-Order Only)</h1>
+  <p>Pickup & Delivery Available</p>
+</div>
 
 <div class="container">
 
-<!-- Chicken & Chips -->
-<a href="chicken and chips.html" class="card">
-    <div class="image-wrapper">
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" class="main-img">
-        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" class="hover-img">
-    </div>
-    <div class="card-content">
-        <h3>Chicken & Chips</h3>
-        <p>Grilled chicken served with crispy fries.</p>
-    </div>
-</a>
+<!-- 1. BARBEQUE -->
+<div class="card">
+  <img src="https://via.placeholder.com/300x200.png?text=Barbeque" alt="Barbeque">
+  <div class="card-content">
+    <h3>Barbeque</h3>
+    <div class="sub-item"><a href="barbeque%20catfish.html">Catfish Barbeque</a></div>
+    <div class="sub-item"><a href="barbeque%20Crocker%20fish.html">Crocker Fish Barbeque</a></div>
+    <div class="sub-item"><a href="chicken%20and%20chips.html">Grill Chicken & Chips</a></div>
+    <div class="sub-item"><a href="suya.html">Beef Suya</a></div>
+    <div class="sub-item"><a href="suya.html">Chicken Suya</a></div>
+  </div>
+</div>
 
-<!-- Asun -->
-<a href="asun.html" class="card">
-    <div class="image-wrapper">
-        <img src="https://images.unsplash.com/photo-1604908176997-4315c9a5f0bd" class="main-img">
-        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1" class="hover-img">
-    </div>
-    <div class="card-content">
-        <h3>Asun</h3>
-        <p>Spicy grilled goat meat with signature sauce.</p>
-    </div>
-</a>
+<!-- 2. PARTY DELIGHT -->
+<div class="card">
+  <img src="https://via.placeholder.com/300x200.png?text=Party+Delight" alt="Party Delight">
+  <div class="card-content">
+    <h3>Party Delight</h3>
+    <div class="sub-item"><a href="asun.html">Asun Gizzard</a></div>
+    <div class="sub-item"><a href="peppered%20gizzard.html">Peppered Gizzard</a></div>
+    <div class="sub-item"><a href="peppered%20fried%20beef.html">Peppered Fried Beef</a></div>
+  </div>
+</div>
 
-<!-- Barbeque Catfish -->
-<a href="barbeque catfish.html" class="card">
-    <div class="image-wrapper">
-        <img src="https://images.unsplash.com/photo-1544025162-d76694265947" class="main-img">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="hover-img">
-    </div>
-    <div class="card-content">
-        <h3>Barbeque Catfish</h3>
-        <p>Whole grilled catfish served with spicy pepper sauce.</p>
-    </div>
-</a>
+<!-- 3. SHAWARMA -->
+<div class="card">
+  <img src="https://via.placeholder.com/300x200.png?text=Shawarma" alt="Shawarma">
+  <div class="card-content">
+    <h3>Shawarma</h3>
+    <div class="sub-item"><a href="suya.html">Beef</a></div>
+    <div class="sub-item"><a href="suya.html">Chicken</a></div>
+  </div>
+</div>
 
-<!-- Small Chops -->
-<a href="smallshops.html" class="card">
-    <div class="image-wrapper">
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="main-img">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" class="hover-img">
-    </div>
-    <div class="card-content">
-        <h3>Small Chops Platter</h3>
-        <p>Samosa, spring roll, puff puff, beef & chicken mix.</p>
-    </div>
-</a>
+<!-- 4. QUICK MEAL -->
+<div class="card">
+  <img src="https://via.placeholder.com/300x200.png?text=Coming+Soon" alt="Quick Meal">
+  <div class="card-content">
+    <h3>Quick Meal</h3>
+    <div class="sub-item">Coming Soon</div>
+  </div>
+</div>
 
+<!-- 5. NATURAL DRINKS -->
+<div class="card">
+  <img src="https://via.placeholder.com/300x200.png?text=Coming+Soon" alt="Natural Drinks">
+  <div class="card-content">
+    <h3>Natural Drinks</h3>
+    <div class="sub-item">Coming Soon</div>
+  </div>
+</div>
+
+</div>
+
+<div class="notice">
+⚠ Orders are strictly pre-order. Minimum notice required. Delivery fees apply.
 </div>
 
 </body>
